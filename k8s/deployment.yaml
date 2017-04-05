@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: java-microservice
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: java-microservice
+    spec:
+      containers:
+      - name: microservice
+        image: stevesloka/java-microservice:0.0.1
+        ports:
+        - name: http
+          containerPort: 8080
+          protocol: TCP
