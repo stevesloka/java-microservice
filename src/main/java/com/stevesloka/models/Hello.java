@@ -9,6 +9,11 @@ public class Hello {
         this.content = "";
     }
 
+    public Hello(String content) {
+        this.id = 0;
+        this.content = content;
+    }
+
     public Hello(long id, String content) {
         this.id = id;
         this.content = content;

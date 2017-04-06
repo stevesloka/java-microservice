@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: java-microservice
 spec:
-  replicas: 1
+  replicas: 3
   template:
     metadata:
       labels:
@@ -11,8 +11,9 @@ spec:
     spec:
       containers:
       - name: microservice
-        image: stevesloka/java-microservice:0.0.1
+        image: stevesloka/java-microservice:0.0.2
+        imagePullPolicy: Always
         ports:
         - name: http
-          containerPort: 8080
+          containerPort: 8443
           protocol: TCP

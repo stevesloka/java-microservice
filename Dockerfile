@@ -6,6 +6,7 @@ EXPOSE 8443
 RUN mkdir -p /app
 RUN mkdir -p /data/logs
 COPY ./build/libs/java-microservice-0.0.1-SNAPSHOT.jar /app/app-0.0.1-SNAPSHOT.jar
+COPY ./steve.jks /app
 
 WORKDIR /app
 CMD ["java", "-jar", "app-0.0.1-SNAPSHOT.jar"]
